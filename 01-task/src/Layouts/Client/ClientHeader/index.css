@@ -1,0 +1,44 @@
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    
+    }
+    
+    
+    
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 120px;
+        background-color: #b996ab;
+        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+    sup{
+        color: purple;
+    }
+    nav ul li a{
+        font-size: 1.3rem;
+        cursor: pointer;
+        color: white;
+        font-weight: 500;
+    }
+    nav h1{
+        color: rgb(31, 31, 31);
+        font-size: 2rem;
+        font-weight: 600;
+        transition: 0.5s;
+        cursor: pointer;
+        
+    }
+    
+    a.active{
+        color: black;
+    }
