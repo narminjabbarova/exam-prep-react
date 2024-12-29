@@ -1,5 +1,6 @@
 import React from 'react'
 import "../NotFound/index.css"
+import { Helmet} from 'react-helmet-async';
 
 const NotFound = () => {
   return (

@@ -1,7 +1,12 @@
 import "../Contact/index.css"
+import { Helmet} from 'react-helmet-async';
 
 const Contact = () => {
   return (
+    <>
+    <Helmet>
+      <title> Contact</title>
+    </Helmet>
     <div className="section_10">
     <div className="responsive-container-block container">
       <form id="iox4">
@@ -48,6 +53,7 @@ const Contact = () => {
       </form>
     </div>
   </div>
+    </>
   
   
 

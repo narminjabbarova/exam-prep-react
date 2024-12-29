@@ -5,9 +5,10 @@ import ClientHeader from './ClientHeader'
 
 const ClientLayout = () => {
   return (
-    // <ClientHeader/>
-    // <Outlet />
-    // <ClientFooter/>
+    <>
+    <ClientHeader/>
+    <Outlet/>
+    </>
   )
 }
 
