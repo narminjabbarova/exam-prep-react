@@ -1,4 +1,4 @@
-const productModel = require("../model/ProductModel.js")
+const productModel = require("../model/ProductModel")
 
 const getProducts = async(req, res) => {
   try {
@@ -41,7 +41,7 @@ const deleteProduct = async(req,res)=>{
 
 const addNewData = async (req, res) => {
   try {
-    const newProduct = ProductModel({ ...req.body });
+    const newProduct = productModel({ ...req.body });
     await newProduct.save();
     res.json({ message: "product added successfully", newProduct: newProduct });
   } catch (error) {
