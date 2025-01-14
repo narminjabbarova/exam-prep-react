@@ -10,6 +10,6 @@ const { getProducts,
 router.get("/", getProducts)
 router.get("/:id", getProductById)
 router.delete("/:id", deleteProduct)
-router.post("/:id", addNewData)
+router.post("/", addNewData)
 
 module.exports = router

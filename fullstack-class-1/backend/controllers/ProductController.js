@@ -26,7 +26,7 @@ const getProductById = async (req, res) => {
 const deleteProduct = async(req,res)=>{
   const { id } = req.params;
   try {
-    const product = productModel.findByIdAndDelete(id)
+    const product = await productModel.findByIdAndDelete(id)
     if(!product){
       return res.status(404).json({message: "can't delete product"})
     }
@@ -41,9 +41,9 @@ const deleteProduct = async(req,res)=>{
 
 const addNewData = async (req, res) => {
   try {
-    const newProduct = productModel({ ...req.body });
+    const newProduct = new productModel({ ...req.body });
     await newProduct.save();
-    res.json({ message: "product added successfully", newProduct: newProduct });
+    res.status(201).json({ message: "product added successfully", newProduct: newProduct });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
